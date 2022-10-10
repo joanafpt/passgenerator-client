@@ -21,6 +21,7 @@ const LoginForm = () => {
   const [passwordLength, setPasswordLength] = useState("");
   const [generatedPass, setGeneratedPass] = useState("");
   const [message, setMessage] = useState("");
+
   const onChangeValues = (event) => {
     setSubmitted(false);
     if (event.target.name === "username-input") {
@@ -42,12 +43,11 @@ const LoginForm = () => {
   };
 
   const callback = (data) => {
-    console.log(data);
+    //console.log(data);
     if (data.message) {
       setMessage(data.message);
       return;
     } else {
-      //message
       setGeneratedPass(data.passToReturn);
     }
   };
