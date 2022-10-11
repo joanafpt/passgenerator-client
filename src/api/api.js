@@ -1,10 +1,10 @@
 //const GET_PSW = "/get-password";
-
+console.log(process.env.API_URL);
 const CLIENT = "http://localhost:3000";
 //const SERVER = "http://localhost:5002";
 const SERVER = "https://password-app-test.herokuapp.com";
+
 export const genPassword = (value, callback) => {
-  // console.log(SERVER + "/get-password");
   fetch(SERVER + "/get-password", {
     method: "GET",
     credentials: "same-origin", // include, *same-origin, omit
